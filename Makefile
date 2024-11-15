@@ -42,7 +42,7 @@ all: $(TARGET) $(RCS_OUTP)
 # compile and link program
 $(TARGET): $(OBJS)
 	@mkdir -p $(dir $@)
-	$(CC) -o $@ $^ $(CFALGS)
+	$(CC) -o $@ $^ $(CFLAGS)
 $(OBJS): $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 	@mkdir -p $(dir $@)
 	$(CC) -o $@ $< -c $(CFLAGS)
